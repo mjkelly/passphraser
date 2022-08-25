@@ -57,7 +57,11 @@ select {
 #passphrase {
   margin: 40px 40px 20px 40px;
   font-size: large;
-  height: 3em;
+}
+
+#passphrase-sizer {
+  /* sized to accommodate 2 lines of passphrase text */
+  height: 60px;
 }
 
 button:hover {
