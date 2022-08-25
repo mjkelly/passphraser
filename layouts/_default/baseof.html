@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Title }}</title>
+  {{ with resources.Get "main.css" | minify }}
+    <style>{{ .Content | safeCSS }}</style>
+  {{ end }}
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <h1>Passphraser</h1>
+  <div class="container">
+    <div class="passphrase-container">
+      <div id="passphrase"></div>
+      <button id="copy-btn">📋 Copy</button>
+      <div id="stats" class="explanation"></div>
+
+      <button id="new-btn">🔀 Generate Passphrase</button>
+      <br>
+      <div class="button-container">
+        Using 
+        <select id="length">
+          <option value="4">4 words</option>
+          <option value="5" selected>5 words</option>
+          <option value="6">6 words</option>
+        </select>
+      </div>
+      <div class="button-container">
+        separated&nbsp;by
+        <select id="separator">
+          <option value=" " selected>spaces</option>
+          <option value="-">dashes</option>
+          <option value="_">underscore</option>
+        </select>
+      </div>
+    </div>
+
+    {{ block "main" . }}
+    {{ .Content }}
+    {{ end}}
+
+    <small>Copyright 2022 Michael Kelly</small>
+  </div>
+  {{ with resources.Get "wordlist.js" | minify }}
+    <script>{{ .Content | safeJS }}</script>
+  {{ end }}
+  {{ with resources.Get "passphrase.js" | minify }}
+    <script>{{ .Content | safeJS }}</script>
+  {{ end }}
+</body>
+</html>
