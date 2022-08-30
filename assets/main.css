@@ -13,7 +13,7 @@ h1 {
   text-transform: uppercase;
   font-size: 48pt;
   text-align: center;
-  margin: 60px 0 60px 0;
+  margin: 40px 0 0 0;
   font-family: 'sans-serif';
   font-weight: 500;
 }
@@ -41,7 +41,7 @@ button {
 }
 
 #new-btn {
-  margin: 40px;
+  margin: 10px;
 }
 
 select {
@@ -60,8 +60,13 @@ select {
 }
 
 #passphrase-sizer {
-  /* sized to accommodate 2 lines of passphrase text */
-  height: 60px;
+  /* sized to accommodate 3 lines of passphrase text */
+  height: 90px;
+}
+
+#footer {
+  font-size: small;
+  margin: 40px 0 40px 0;
 }
 
 button:hover {
@@ -85,10 +90,13 @@ button:focus-visible {
 
 .passphrase-container {
   text-align: center;
+  border: 1px solid black;
+  margin: 40px 0 40px 0;
+  padding: 20px;
 }
 
 .explanation {
-  margin: 20px;
+  margin: 40px 0 40px 0;
   font-size: small;
   color: #999;
 }
@@ -97,3 +105,4 @@ button:focus-visible {
   margin: 0;
   display: inline-block;
 }
+
