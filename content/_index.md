@@ -28,7 +28,7 @@ Here are some references:
 - [security.org](https://www.security.org/how-secure-is-my-password/)
 
 All the passwords generated on this site, regardless of settings, exceed the
-recommendations in NIST's [Digital Identity Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html), updated in 2020. (See "5.1.1.1 Memorized Secret Authenticators").
+recommendations in NIST's [Digital Identity Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html), updated in 2020. (See "5.1.1.1 Memorized Secret Authenticators".)
 
 ## What else can I do to increase my security online?
 
@@ -43,14 +43,15 @@ Here are some popular ones:
 
 ## How do you determine password strength? How do you compare the strength of a password and a passphrase?
 
-If you want to know how I'm comparing the strength of passwords and
-passphrases, read on. If you don't care, feel free to skip over this.
+If you want to know how I'm comparing the strength of passwords and passphrases
+and don't mind a little math, read on. If you don't care, feel free to skip
+over this.
 
 The most principled way of determining password complexity is to assume your attacker knows your password generation scheme. So if you're using a 10-character random password with a specific set of special characters, assume they know that. Now, trick to remaining secure is to make them search as many passwords as possible.
 
 For instance, a 5-character random password made up of only lowercase letters (26 options), has `26 * 26 * 26 * 26 * 26` combinations, because you can use any of 26 different letters in each of 5 places. That's 11,881,376 combinations. That sounds like a lot, but hackers can guess passwords at a very high rate that's always increasing.
 
-Since these numbers of combinations get huge, we usually talk about the log-base-2 (log2) of these numbers. `log2(11,881,376) = 23.5`. We call this number _bits of entropy_, so a 5-character random password made up of only lowercase letters has 23.5 bits of entropy. Remember, we're talking about log-base-2, so for every added bit of entropy in a password, an attacker must guess twice as many combinations.
+Since these numbers of combinations get huge, we usually talk about the log-base-2 (log2) of these numbers. `log2(11,881,376) = 23.5`. (Which means, `2^23.5 = 11,881,376`.) . We call this number _bits of entropy_, so a 5-character random password made up of only lowercase letters has 23.5 bits of entropy. Remember, we're talking about log-base-2, so for every added bit of entropy in a password, an attacker must guess twice as many combinations.
 
 This gives us a way to compare passphrases and passwords. Passphrases are just like passwords, but each word in the passphrase is taken from a word list. If your word list has 5,000 words, and you have a 4-word random passphrase, you have `5,000 * 5,000 * 5,000 * 5,000 = 625,000,000,000,000` combinations. `log2(625,000,000,000,000) = 49.1`, so a random passphrase generated this way has 49.1 bits of entropy.
 
