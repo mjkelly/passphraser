@@ -57,6 +57,7 @@ select {
 #passphrase {
   margin: 40px 40px 20px 40px;
   font-size: large;
+  overflow-wrap: break-word;
 }
 
 #passphrase-sizer {
@@ -84,14 +85,14 @@ button:focus-visible {
 
 .container {
   width: 90%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .passphrase-container {
   text-align: center;
   border: 1px solid black;
-  margin: 40px 0 40px 0;
+  margin: 40px 0 80px 0;
   padding: 20px;
 }
 
