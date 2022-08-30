@@ -43,12 +43,15 @@
     {{ .Content }}
     {{ end}}
 
-    <small>Copyright 2022 Michael Kelly</small>
+    <small>
+      Copyright 2022 Michael Kelly.
+      <a href="https://github.com/mjkelly/passphraser">View the code on Github</a>.
+    </small>
   </div>
-  {{ with resources.Get "wordlist.js" | minify }}
+  {{ with resources.Get "wordlist.js" }}
     <script>{{ .Content | safeJS }}</script>
   {{ end }}
-  {{ with resources.Get "passphrase.js" | minify }}
+  {{ with resources.Get "passphrase.js" }}
     <script>{{ .Content | safeJS }}</script>
   {{ end }}
 </body>
