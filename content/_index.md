@@ -3,19 +3,47 @@ title: Passphraser
 ---
 ## Why should I use a random passphrase?
 
-The passwords that most people come up with are hard to remember _and_ easy for computers to guess. Randomness is the source of strength in a password, and humans are terrible at coming up with randomness.
+The passwords that most people come up with are hard for humans to remember _and_ easy for computers to guess. Randomness is the source of strength in a password, and humans are terrible at coming up with randomness.
 
 We use common words, easily-typed sequences on a keyboard, or our own personal information, which a motivated attacker can learn.
 
 Strong, random passwords like `pQ[!:WQblzY2` are hard to remember.
 
-Random passphrases can be equally as strong but are easier to remember. For example, `sarcasm towel mimosas smallest censoring` is a passphrase of approximately equal strength to `pQ[!:WQblzY2`. If you find the passphrase easier to remember, you are not alone. Passphrases are easier for most humans to remember, but no easier for computers to guess.
+Random passphrases, on the other hand, consist of a series of words. They must be longer (in terms of characters) to be as strong as passwords, but they're easier to remember for most people. For example, `sarcasm towel mimosas smallest censoring` is a passphrase of approximately equal strength to `pQ[!:WQblzY2`. If you find the passphrase easier to remember, you are not alone.That's the advantage of passphrases.
 
-For a longer discussion about how passwords are cracked, check out [useapassphrase.com][uap]. It's the site this one is based on!
+## How strong of a passphrase do I need?
 
-[uap]: https://www.useapassphrase.com/
+The default setting on this page (a 5-word passphrase) create a strong
+password, designed to be suitable for high-value accounts like your email.
+
+Estimates on different websites say a password like `pQ[!:WQblzY2` takes
+between 34,000 years and 400,000 years to crack as of 2022. The time it takes
+an attacker to crack a given password is always decreasing, as computers get
+faster and faster.
+
+Here are some references:
+
+- [CNBC](https://www.cnbc.com/2022/03/20/study-if-your-passwords-are-less-than-8-characters-long-change-them.html#:~:text=The%20findings%20suggest%20that%20even,hours%20by%20the%20average%20hacker.)
+- [security.org](https://www.security.org/how-secure-is-my-password/)
+
+All the passwords generated on this site, regardless of settings, exceed the
+recommendations in NIST's [Digital Identity Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html), updated in 2020. (See "5.1.1.1 Memorized Secret Authenticators").
+
+## What else can I do to increase my security online?
+
+The most important thing you can do is **not reuse passwords**. This means use
+a unique password for each site, ideally, by using a password
+manager.
+
+Here are some popular ones:
+- [1Password](https://1password.com/)
+- [BitWarden](https://bitwarden.com/)
+- [LastPass](https://www.lastpass.com/)
 
 ## How do you determine password strength? How do you compare the strength of a password and a passphrase?
+
+If you want to know how I'm comparing the strength of passwords and
+passphrases, read on. If you don't care, feel free to skip over this.
 
 The most principled way of determining password complexity is to assume your attacker knows your password generation scheme. So if you're using a 10-character random password with a specific set of special characters, assume they know that. Now, trick to remaining secure is to make them search as many passwords as possible.
 
