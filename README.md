@@ -5,6 +5,15 @@ Passphrase](https://www.useapassphrase.com/).
 
 You can view this page online at: https://www.michaelkelly.org/passphraser.html
 
+## Screenshots
+
+This is what it looks like on desktop and mobile:
+
+![Passphraser desktop](./screenshots/desktop.png)
+
+![Passphraser mobile](./screenshots/mobile.jpg)
+
+
 ## Building
 
 Requires Hugo: https://gohugo.io/getting-started/quick-start/
