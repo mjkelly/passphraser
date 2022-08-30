@@ -9,17 +9,18 @@ We use common words, easily-typed sequences on a keyboard, or our own personal i
 
 Strong, random passwords like `pQ[!:WQblzY2` are hard to remember.
 
-Random passphrases, on the other hand, consist of a series of words. They must be longer (in terms of characters) to be as strong as passwords, but they're easier to remember for most people. For example, `sarcasm towel mimosas smallest censoring` is a passphrase of approximately equal strength to `pQ[!:WQblzY2`. If you find the passphrase easier to remember, you are not alone.That's the advantage of passphrases.
+Random passphrases, on the other hand, consist of a series of words. They must be longer (in terms of characters) to be as strong as passwords, but they're easier to remember for most people. For example, `sarcasm towel mimosas smallest censoring` is a passphrase approximately as strong as `pQ[!:WQblzY2`. If you find the passphrase easier to remember, you are not alone.That's the advantage of passphrases.
 
 ## How strong of a passphrase do I need?
 
 The default setting on this page (a 5-word passphrase) create a strong
 password, designed to be suitable for high-value accounts like your email.
 
-Estimates on different websites say a password like `pQ[!:WQblzY2` takes
-between 34,000 years and 400,000 years to crack as of 2022. The time it takes
-an attacker to crack a given password is always decreasing, as computers get
-faster and faster.
+Estimates on different websites say a password like `pQ[!:WQblzY2` or a
+passphrase like `sarcasm towel mimosas smallest censoring` take between 34,000
+years and 400,000 years to crack as of 2022. The time it takes an attacker to
+crack a given password is always decreasing, as computers get faster and
+faster.
 
 Here are some references:
 
