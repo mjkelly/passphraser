@@ -40,7 +40,6 @@ function randomInts(count) {
 // Returns `count` random words from WORDS separated by `separator`.
 function passphrase(words, separator) {
   var indexes = randomInts(words);
-  console.log(indexes);
   return indexes.map(i => WORDS[i]).join(separator);
 }
 
@@ -50,7 +49,6 @@ function newPassphrase() {
   const lengthElem = document.getElementById('length');
   const separatorElem = document.getElementById('separator');
   const numberOfWords = parseInt(lengthElem.value);
-  console.log(numberOfWords + " words");
   passphraseElem.innerHTML = passphrase(numberOfWords, separatorElem.value);
   showStats(numberOfWords);
 }
@@ -77,11 +75,3 @@ function showStats(numberOfWords) {
   statsElem.innerHTML =
     `Using a ${WORDS.length}-word list, this passphrase has ${Math.round(totalEntropy)} bits of entropy. That's as strong as a  ${equivalentPasswordLen}-character random password, containing uppercase and lowercase letters, numbers, and symbols.`;
 }
-
-// Page setup
-document.getElementById('new-btn').addEventListener('click', newPassphrase);
-document.getElementById('copy-btn').addEventListener('click', copyPassphrase);
-document.getElementById('length').addEventListener('change', newPassphrase);
-document.getElementById('separator').addEventListener('change', newPassphrase);
-
-newPassphrase();
