@@ -37,7 +37,7 @@ Getting your password from a website feels a little sketchy. Here are some preca
 - Save this web page to your own computer then open it up in a browser, and it'll work just as well. This page loads no external resources.
 - Load up your local copy of this page in your browser while you're not connected to the internet.
 
-The source materials for this page are all at <https://github.com/mjkelly/passphraser>. You can clone that repository and re-generate the page yourself.
+All the javascript that powers this page is inlined into the page, and is not minified -- you can open the page up and audit it yourself. The source materials for this page are all at <https://github.com/mjkelly/passphraser>. You can clone that repository and re-generate the page as well.
 
 ## What else can I do to increase my security online?
 
