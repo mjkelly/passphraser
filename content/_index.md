@@ -30,6 +30,15 @@ Here are some references:
 All the passwords generated on this site, regardless of settings, exceed the
 recommendations in NIST's [Digital Identity Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html), updated in 2020. (See "5.1.1.1 Memorized Secret Authenticators".)
 
+## How do I know I can trust this page?
+
+Getting your password from a website feels a little sketchy. Here are some precautions you can take:
+
+- Save this web page to your own computer then open it up in a browser, and it'll work just as well. This page loads no external resources.
+- Load up your local copy of this page in your browser while you're not connected to the internet.
+
+The source materials for this page are all at <https://github.com/mjkelly/passphraser>. You can clone that repository and re-generate the page yourself.
+
 ## What else can I do to increase my security online?
 
 The most important thing you can do is **not reuse passwords**. This means use
