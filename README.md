@@ -32,3 +32,8 @@ per line, and show 100,000 lines. This lets you copy and paste the output and
 run whatever tests you want.
 
 `bias-checks.py` has some numerical checks I thought of.
+
+## Licenses
+
+1. Inconsolata (which is base64-encoded in `fonts.css`) is covered by the OFL. See `OFL.txt`.
+2. Everything else is covered by the MIT license. See `LICENSE`.
