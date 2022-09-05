@@ -18,7 +18,7 @@ def pct_diff(actual, expected):
     print(f"% difference = {diff * 100.0:.2f}%")
 
 
-WORDS = 44368
+WORDS = 44344
 
 filename = sys.argv[1]
 arr = np.loadtxt(filename).flatten()
