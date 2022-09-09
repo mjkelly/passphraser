@@ -36,4 +36,6 @@ run whatever tests you want.
 ## Licenses
 
 1. Inconsolata (which is base64-encoded in `fonts.css`) is covered by the OFL. See `OFL.txt`.
-2. Everything else is covered by the MIT license. See `LICENSE`.
+2. The list of words used is public domain; it is a processed list of words
+   ultimately from <https://en.wikipedia.org/wiki/Moby_Project>.
+3. Everything else (the code) is covered by the MIT license. See `LICENSE`.
