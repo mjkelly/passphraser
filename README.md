@@ -33,6 +33,18 @@ run whatever tests you want.
 
 `bias-checks.py` has some numerical checks I thought of.
 
+## Word list
+
+The word list is in `assets/wordlist.js`. It's a formatted javascript list. If
+you want to export it to plaintext, you can run this from the top-level
+directory of this git repo:
+
+```
+./scripts/wordlist_to_txt.pl < assets/wordlist.js > wordlist.txt
+```
+
+This will give you a `wordlist.txt`.
+
 ## Licenses
 
 1. Inconsolata (which is base64-encoded in `fonts.css`) is covered by the OFL. See `OFL.txt`.
