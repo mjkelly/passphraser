@@ -24,11 +24,14 @@ faster.
 
 Here are some references:
 
-- [CNBC](https://www.cnbc.com/2022/03/20/study-if-your-passwords-are-less-than-8-characters-long-change-them.html#:~:text=The%20findings%20suggest%20that%20even,hours%20by%20the%20average%20hacker.)
+- [CNBC](https://www.cnbc.com/2022/03/20/study-if-your-passwords-are-less-than-8-characters-long-change-them.html)
 - [security.org](https://www.security.org/how-secure-is-my-password/)
 
 All the passwords generated on this site, regardless of settings, exceed the
-recommendations in NIST's [Digital Identity Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html), updated in 2020. (See "5.1.1.1 Memorized Secret Authenticators".)
+complexity of the recommended password length from NIST's [Digital Identity
+Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html), updated in 2020.
+(See "5.1.1.1 Memorized Secret Authenticators". NIST's guidelines are in terms
+of passwords, not passphrases.)
 
 ## How do I know I can trust this page?
 
@@ -45,16 +48,19 @@ The most important thing you can do is **not reuse passwords**. This means use
 a unique password for each site, ideally, by using a password
 manager.
 
-Here are some popular ones:
-- [1Password](https://1password.com/)
-- [BitWarden](https://bitwarden.com/)
-- [LastPass](https://www.lastpass.com/)
+Here two recommended password managers:
+- [1Password](https://1password.com/) (paid)
+- [BitWarden](https://bitwarden.com/) (free)
+
+References for password manager recommendations:
+- [Wirecutter (New York Times), 2023](https://www.nytimes.com/wirecutter/reviews/best-password-managers/)
+- [Wired, 2023](https://www.wired.com/story/best-password-managers/)
+- [Consumer Reports, 2021](https://www.consumerreports.org/electronics-computers/password-managers/best-password-managers-review-digital-security-privacy-ease-of-use-a7337649384/)
 
 ## How do you determine password strength? How do you compare the strength of a password and a passphrase?
 
-If you want to know how I'm comparing the strength of passwords and passphrases
-and don't mind a little math, read on. If you don't care, feel free to skip
-over this.
+_Math alert! You don't need to know this to make use of the rest of this page.
+This is here in case you're curious!_
 
 The most principled way of determining password complexity is to assume your attacker knows your password generation scheme. So if you're using a 10-character random password with a specific set of special characters, assume they know that. Now, trick to remaining secure is to make them search as many passwords as possible.
 
