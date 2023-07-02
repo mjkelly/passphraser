@@ -1,9 +1,13 @@
 # Passphraser
 
-A single-page passphrase app heavily inspired by [Use a
-Passphrase](https://www.useapassphrase.com/).
+A self-contained Javscript passphrase generator. Philosophically, it is heavily
+inspired by [Use a Passphrase](https://www.useapassphrase.com/).
 
-You can view this page online at: https://www.michaelkelly.org/passphraser.html
+You can view this page online at:
+<https://www.michaelkelly.org/passphraser.html>
+
+*The canonical location of the source code is
+<https://git.sr.ht/~mkelly/passphraser>. GitHub is a mirror.*
 
 ## Screenshots
 
