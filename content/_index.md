@@ -40,7 +40,7 @@ Getting your password from a website feels a little sketchy. Here are some preca
 - Save this web page to your own computer then open it up in a browser, and it'll work just as well. This page loads no external resources.
 - Load up your local copy of this page in your browser while you're not connected to the internet.
 
-All the javascript that powers this page is inlined into the page, and is not minified -- you can open the page up and audit it yourself. The source materials for this page are all at <https://github.com/mjkelly/passphraser>. You can clone that repository and re-generate the page as well.
+All the javascript that powers this page is inlined into the page, and is not minified -- you can open the page up and audit it yourself. The source materials for this page are [on sourcehut](https://git.sr.ht/~mkelly/passphraser) (and [mirrored to GitHub](https://github.com/mjkelly/passphraser>)). You can clone that repository and re-generate the page yourself!
 
 ## What else can I do to increase my security online?
 
@@ -50,7 +50,7 @@ manager.
 
 Here two recommended password managers:
 - [1Password](https://1password.com/) (paid)
-- [BitWarden](https://bitwarden.com/) (free)
+- [BitWarden](https://bitwarden.com/) (free and paid plans)
 
 References for password manager recommendations:
 - [Wirecutter (New York Times), 2023](https://www.nytimes.com/wirecutter/reviews/best-password-managers/)
