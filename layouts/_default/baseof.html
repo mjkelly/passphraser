@@ -19,9 +19,7 @@
         <div id="passphrase"></div>
       </div>
       <button id="copy-btn">📋 Copy</button>
-      <div id="stats" class="explanation"></div>
-
-      <button id="new-btn">🔀 Generate Passphrase</button>
+      <button id="new-btn">🔀 New Passphrase</button>
       <br>
       <div class="button-container">
         Using 
@@ -36,9 +34,10 @@
         <select id="separator">
           <option value=" " selected>spaces</option>
           <option value="-">dashes</option>
-          <option value="_">underscore</option>
+          <option value="_">underscores</option>
         </select>
       </div>
+      <div id="stats" class="explanation"></div>
     </div>
 
     {{ block "main" . }}
