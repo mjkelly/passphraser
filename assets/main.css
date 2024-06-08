@@ -6,7 +6,7 @@ body {
   margin: 0;
   color: #333;
   line-height: 1.4;
-  font-family: 'Helvetica Nueue', 'Helvetiva', 'sans-serif';
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
 }
 
 
@@ -16,7 +16,7 @@ h1 {
   font-size: 60pt;
   text-align: center;
   margin: 0 0 0 0;
-  font-family: 'Inconsolata', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
   font-weight: 300;
 }
 @media (max-width: 700px) {

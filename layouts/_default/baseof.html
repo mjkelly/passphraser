@@ -3,9 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ .Title }}</title>
-  {{ with resources.Get "fonts.css" | minify }}
-    <style>{{ .Content | safeCSS }}</style>
-  {{ end }}
   {{ with resources.Get "main.css" | minify }}
     <style>{{ .Content | safeCSS }}</style>
   {{ end }}
