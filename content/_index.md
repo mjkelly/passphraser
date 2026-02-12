@@ -27,11 +27,14 @@ Here are some references:
 - [CNBC](https://www.cnbc.com/2022/03/20/study-if-your-passwords-are-less-than-8-characters-long-change-them.html)
 - [security.org](https://www.security.org/how-secure-is-my-password/)
 
-All the passwords generated on this site, regardless of settings, exceed the
-complexity of the recommended password length from NIST's [Digital Identity
-Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html), updated in 2020.
-(See "5.1.1.1 Memorized Secret Authenticators". NIST's guidelines are in terms
-of passwords, not passphrases.)
+**If you choose a password length of 7 words**, passwords generated will exceed
+the password complexity requirements of NIST
+[SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html#password) for
+passwords used without multifactor authentication, updated in 2025. (NIST's
+guidelines are in terms of password length, which we translate to passphrase
+via an entropy calculation. We assume, favorably, that passwords are entirely
+random. A 6-word passphrase should also be fine, especially if you use
+multifactor authentication.)
 
 ## How do I know I can trust this page?
 
