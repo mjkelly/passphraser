@@ -49,7 +49,7 @@ function newPassphrase() {
   const lengthElem = document.getElementById('length');
   const separatorElem = document.getElementById('separator');
   const numberOfWords = parseInt(lengthElem.value);
-  passphraseElem.innerHTML = passphrase(numberOfWords, separatorElem.value);
+  passphraseElem.textContent = passphrase(numberOfWords, separatorElem.value);
   showStats(numberOfWords);
 }
 
@@ -57,12 +57,12 @@ function newPassphrase() {
 function copyPassphrase() {
   const copyElem = document.getElementById('copy-btn');
   const passphraseElem = document.getElementById('passphrase');
-  const originalText = copyElem.innerHTML;
+  const originalHTML = copyElem.innerHTML;
 
-  navigator.clipboard.writeText(passphraseElem.innerHTML);
-  copyElem.textContent = '✨ Copied!';
+  navigator.clipboard.writeText(passphraseElem.textContent);
+  copyElem.innerHTML = '<span aria-hidden="true">✨ </span>Copied!';
   window.setTimeout(() => {
-    copyElem.innerHTML = originalText;
+    copyElem.innerHTML = originalHTML;
   }, 1000);
 }
 

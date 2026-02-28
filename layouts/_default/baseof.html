@@ -7,19 +7,20 @@
     <style>{{ .Content | safeCSS }}</style>
   {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Generate strong, random, memorable passphrases using cryptographically secure randomness. Fully client-side — no data leaves your browser.">
 </head>
 <body>
   <div class="container">
-    <div class="passphrase-container">
+    <header class="passphrase-container">
       <h1>Pass&shy;phraser</h1>
       <div id="passphrase-sizer">
-        <div id="passphrase"></div>
+        <div id="passphrase" role="status" aria-label="Generated passphrase"></div>
       </div>
-      <button id="copy-btn">📋 Copy</button>
-      <button id="new-btn">🔀 New Passphrase</button>
+      <button id="copy-btn" aria-live="polite"><span aria-hidden="true">📋 </span>Copy</button>
+      <button id="new-btn"><span aria-hidden="true">🔀 </span>New Passphrase</button>
       <br>
       <div class="button-container">
-        Using 
+        <label for="length">Using</label>
         <select id="length">
           <option value="5">5 words</option>
           <option value="6" selected>6 words</option>
@@ -27,7 +28,7 @@
         </select>
       </div>
       <div class="button-container">
-        separated&nbsp;by
+        <label for="separator">separated&nbsp;by</label>
         <select id="separator">
           <option value=" " selected>spaces</option>
           <option value="-">dashes</option>
@@ -35,17 +36,19 @@
         </select>
       </div>
       <div id="stats" class="explanation"></div>
-    </div>
+    </header>
 
+    <main>
     {{ block "main" . }}
     {{ .Content }}
     {{ end}}
+    </main>
 
-    <div id="footer">
-      Made with ❤️  in Los Angeles, California, USA.<br>
+    <footer id="footer">
+      Made with <span aria-hidden="true">❤️</span><span class="sr-only">love</span> in Los Angeles, California, USA.<br>
       Copyright 2022-2026 Michael Kelly.<br>
       <a href="https://github.com/mjkelly/passphraser">View the code on Github</a>.
-    </div>
+    </footer>
   </div>
   {{ with resources.Get "wordlist.js" }}
     <script>{{ .Content | safeJS }}</script>
