@@ -13,7 +13,7 @@ Random passphrases, on the other hand, consist of a series of words. They must b
 
 ## How strong of a passphrase do I need?
 
-The default setting on this page (a 5-word passphrase) create a strong
+The default setting on this page (a 6-word passphrase) create a strong
 password, designed to be suitable for high-value accounts like your email.
 
 Estimates on different websites say a password like `pQ[!:WQblzY2` or a
