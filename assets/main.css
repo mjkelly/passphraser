@@ -124,3 +124,45 @@ select:focus-visible {
   border: 0;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+
+  button {
+    background-color: #2a2a2a;
+    border-color: #555;
+    color: #e0e0e0;
+    text-decoration-color: #555;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  button:hover {
+    background-color: #333;
+  }
+
+  button:focus-visible,
+  select:focus-visible {
+    outline-color: #6688ff;
+  }
+
+  select {
+    background-color: #2a2a2a;
+    border-color: #555;
+    color: #e0e0e0;
+  }
+
+  .explanation {
+    color: #aaa;
+  }
+
+  a {
+    color: #6688ff;
+  }
+
+  a:visited {
+    color: #9977dd;
+  }
+}
+
