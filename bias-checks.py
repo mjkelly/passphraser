@@ -21,18 +21,6 @@ from pathlib import Path
 import numpy as np
 from scipy.stats import chi2 as _chi2
 
-def chi2_sf(x, df):
-    """Survival function P(Chi2_df > x), i.e. the chi-squared p-value.
-
-    Uses scipy when available (most accurate). Otherwise falls back to
-    a pure-Python regularised upper incomplete gamma function
-    (Numerical Recipes gammq), which is exact for this purpose and
-    needs no extra dependency.
-    """
-    if x <= 0:
-        return 1.0
-    return float(_chi2.sf(x, df))
-
 
 def compare(label, actual, expected):
     print(f"{label}: actual={actual:.2f}, expected={expected:.2f}, ", end="")
@@ -45,7 +33,7 @@ def pct_diff(actual, expected):
 
 
 def chi2_report(label, chi2, df):
-    p = chi2_sf(chi2, df)
+    p = float(_chi2.sf(chi2, df))
     print(f"{label} chi-squared: chi2={chi2:.2f}, df={df}, p={p:.4g}")
     return p
 
@@ -72,11 +60,17 @@ def count_wordlist():
 def main(argv=None):
     parser = argparse.ArgumentParser(
         description="Check a benchmark output file for bias in the "
-                    "generated word indices.")
-    parser.add_argument("filename", help="file of indices, e.g. benchmark output")
-    parser.add_argument("--words", type=int, default=None,
-                        help="wordlist size; default: count assets/wordlist.js")
-    parser.add_argument("--buckets", type=int, default=16,
+        "generated word indices.")
+    parser.add_argument("filename",
+                        help="file of indices, e.g. benchmark output")
+    parser.add_argument(
+        "--words",
+        type=int,
+        default=None,
+        help="wordlist size; default: count assets/wordlist.js")
+    parser.add_argument("--buckets",
+                        type=int,
+                        default=16,
                         help="number of distribution buckets (default: 16)")
     args = parser.parse_args(argv)
 
@@ -111,16 +105,17 @@ def main(argv=None):
 
     out_of_range = int(((arr < 0) | (arr >= words)).sum())
     if out_of_range:
-        print(f"ERROR: {out_of_range} sample(s) outside [0, {words}) -- "
-              f"the generator produced an index the word list cannot hold",
-              file=sys.stderr)
+        print(
+            f"ERROR: {out_of_range} sample(s) outside [0, {words}) -- "
+            f"the generator produced an index the word list cannot hold",
+            file=sys.stderr)
         return 2
     print()
 
     # Mean, with its standard error, so the deviation can be judged.
     mean = float(arr.mean())
     expected_mean = (words - 1) / 2.0
-    sd = math.sqrt((words ** 2 - 1) / 12.0)
+    sd = math.sqrt((words**2 - 1) / 12.0)
     se = sd / math.sqrt(n)
     compare("Mean", mean, expected_mean)
     print(f"Mean z-score: {(mean - expected_mean) / se:.2f} "
@@ -136,9 +131,8 @@ def main(argv=None):
     odd = n - even
     compare("Evens", even, expected_even)
     compare("Odds", odd, expected_odd)
-    chi2_report("Even/odd",
-                (even - expected_even) ** 2 / expected_even
-                + (odd - expected_odd) ** 2 / expected_odd, 1)
+    chi2_report("Even/odd", (even - expected_even)**2 / expected_even +
+                (odd - expected_odd)**2 / expected_odd, 1)
     print()
 
     # Buckets: partition [0, words) exactly, no dropped tail.
@@ -149,7 +143,7 @@ def main(argv=None):
     chi2 = 0.0
     for i in range(k):
         expected = n * (edges[i + 1] - edges[i]) / words
-        chi2 += (counts[i] - expected) ** 2 / expected
+        chi2 += (counts[i] - expected)**2 / expected
         compare(f"{k}th #{i + 1} [{edges[i]}..{edges[i + 1] - 1}]",
                 float(counts[i]), expected)
     chi2_report(f"{k}-bucket distribution", chi2, k - 1)
@@ -160,8 +154,8 @@ def main(argv=None):
     # approximate, and the bucket test above is the more reliable one.
     per_word = np.bincount(arr, minlength=words)
     expected_per_word = n / words
-    full_chi2 = float(((per_word - expected_per_word) ** 2
-                       / expected_per_word).sum())
+    full_chi2 = float(
+        ((per_word - expected_per_word)**2 / expected_per_word).sum())
     if expected_per_word < 5:
         print(f"note: expected count per word is {expected_per_word:.2f} "
               f"(< 5), so the full-distribution p-value is approximate; "
