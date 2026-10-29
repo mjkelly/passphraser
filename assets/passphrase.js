@@ -1,4 +1,4 @@
-'use strict;'
+'use strict';
 
 // When comparing to a traditional password, we generously assume 
 // traditional passwords draw from almost every typeable character.
@@ -12,13 +12,14 @@ function randomInt() {
   // If we need to generate larger numbers, we can replace
   // Uint16Array with Uint32Array etc below.
   if (WORDS.length > 2 ** 16) {
-    throw new Exception(`WORDS.length = ${WORDS.length}, too large`);
+    throw new Error(`WORDS.length = ${WORDS.length}, too large`);
   }
   if (WORDS.length < 2 ** 15) {
-    throw new Exception(`WORDS.length = ${WORDS.length}, too small`);
+    throw new Error(`WORDS.length = ${WORDS.length}, too small`);
   }
   var crypto = window.crypto || window.msCrypto;
 
+  let r;
   do {
     // Generate a random int, and throw it away if it's larger than the max.
     // This works well for word lists of approximately our size. If WORDS is

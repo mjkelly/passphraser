@@ -1,4 +1,4 @@
-'use strict;'
+'use strict';
 
 // Page setup
 document.getElementById('new-btn').addEventListener('click', newPassphrase);
