@@ -30,7 +30,7 @@ To generate files in the `public` directory, run `hugo`
 
 Requires python 3 with numpy: `pip3 install numpy`
 
-There is an alternate endpoint, `/benchmark.html`, which outputs only numerical
+There is an alternate endpoint, `/benchmark/`, which outputs only numerical
 indices (which we would normally use to index into our word list). We output 5
 per line, and show 100,000 lines. This lets you copy and paste the output and
 run whatever tests you want.
